@@ -30,8 +30,7 @@ class Game:
     
     def start_game(self):
         while(True):
-            option = int(input("Möchten Sie gegen ein Computer (1) oder gegen einen anderen Spieler (2) spielen?"))
-            print(option)
+            option = int(input("Möchten Sie gegen ein Computer (1) oder gegen einen anderen Spieler (2) spielen?\n"))
             if option != 1 and option != 2:
                 print("Das ist keine gültige Eingabe. Bitte versuchen sie es nochmal.")
             else: 
@@ -50,7 +49,7 @@ class Game:
                 self.field = self.player1.make_move(self.field)
                 turn += 1
             elif turn == 1: 
-                self.field = self.player2.make_move(self.ield)
+                self.field = self.player2.make_move(self.field)
                 turn -= 1
             self.print_field()
             over = self.check_over()
